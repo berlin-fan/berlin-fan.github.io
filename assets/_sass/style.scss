@@ -771,19 +771,7 @@ iframe {
 
 //------- {{ copyright }} -------//
 
-#copyright {
-  margin: 0;
-  padding-top: 1em;
-  font-size: .9em;
-  text-align: center;
-  border-top: 2px solid $share-bd;
-  > a {
-    color: $green;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+
 
 /*---------------------------------*\
    Fullscreen Style
