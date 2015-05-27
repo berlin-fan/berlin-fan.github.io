@@ -7,7 +7,7 @@ description: 检查mysql复制情况
 ---
 #数据备份脚本
 
-```bash
+```sh
 #!/bin/bash
 for i in `ls -F /data/txdata/ | grep '/$' | awk -F"/" {'print $1'}`
 do
