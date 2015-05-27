@@ -2,12 +2,12 @@
 layout: post
 title: mysql主从复制检查
 category: script
-tags: [Windows , script]
+tags: [linux, script]
 description: 检查mysql复制情况
 ---
 #数据备份脚本
 
-```sh
+```python
 #!/bin/bash
 for i in `ls -F /data/txdata/ | grep '/$' | awk -F"/" {'print $1'}`
 do
@@ -21,7 +21,7 @@ do
    do
       echo  $getm_ip $getm_port $gets_ip $gets_port $j
       echo "******"$j"******">>result.log
-      mk-table-checksum h=$getm_ip,u=waptx,p='(YDtx405)',P=$getm_port h=$gets_ip,u=waptx,p='(YDtx405)',P=$gets_port  -d $j | mk-checksum-filter>>result.log
+      mk-table-checksum h=$getm_ip,u=admin,p='123',P=$getm_port h=$gets_ip,u=admin,p='123',P=$gets_port  -d $j | mk-checksum-filter>>result.log
     done
 done
 ```
